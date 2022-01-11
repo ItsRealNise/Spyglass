@@ -3,8 +3,6 @@
 namespace ItsRealNise\Spyglass;
 
 use pocketmine\inventory\CreativeInventory;
-use pocketmine\block\BlockToolType;
-use pocketmine\item\Item;
 use pocketmine\item\ItemFactory;
 use pocketmine\network\mcpe\convert\ItemTranslator;
 use pocketmine\plugin\PluginBase;
