@@ -2,27 +2,13 @@
 
 namespace ItsRealNise\Spyglass;
 
-use pocketmine\block\BlockBreakInfo;
-use pocketmine\block\BlockFactory;
-use pocketmine\block\BlockLegacyIds as Ids;
-use pocketmine\block\BlockIdentifier as BID;
 use pocketmine\inventory\CreativeInventory;
 use pocketmine\block\BlockToolType;
-use pocketmine\item\ToolTier;
 use pocketmine\item\Item;
 use pocketmine\item\ItemFactory;
-use pocketmine\item\ItemIdentifier;
-use pocketmine\network\mcpe\convert\RuntimeBlockMapping;
 use pocketmine\network\mcpe\convert\ItemTranslator;
-use pocketmine\data\bedrock\LegacyBlockIdToStringIdMap;
-use pocketmine\data\bedrock\LegacyToStringBidirectionalIdMap;
-use pocketmine\block\utils\TreeType;
 use pocketmine\plugin\PluginBase;
-use pocketmine\scheduler\AsyncTask;
-use pocketmine\Server;
-use pocketmine\utils\Config;
 use ReflectionClass;
-use ReflectionMethod;
 use const pocketmine\BEDROCK_DATA_PATH;
 
 use ItsRealNise\Spyglass\item\Spyglass;
@@ -31,7 +17,6 @@ class Main extends PluginBase {
     
     public function onLoad() : void{
         $this->initItems();
-        //$this->initBlocks();
     }
     
     public function initItems(): void
