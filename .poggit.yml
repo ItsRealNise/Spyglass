@@ -5,4 +5,5 @@ branches:
 projects:
   Spyglass:
     path: ""
+    icon: icon.png
 ...
