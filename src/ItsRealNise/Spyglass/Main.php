@@ -6,6 +6,7 @@ use pocketmine\inventory\CreativeInventory;
 use pocketmine\item\ItemFactory;
 use pocketmine\network\mcpe\convert\ItemTranslator;
 use pocketmine\plugin\PluginBase;
+use pocketmine\item\StringToItemParser;
 use ReflectionClass;
 use const pocketmine\BEDROCK_DATA_PATH;
 
@@ -48,6 +49,15 @@ class Main extends PluginBase {
         
         $item = new Spyglass();
         ItemFactory::getInstance()->register($item, true);
-        CreativeInventory::getInstance()->add($item);
+        self::register(true);
+    }
+    
+    public static function register(bool $creative = false): bool{
+        $item = new Spyglass();
+        $name = $item->getVanillaName();
+
+        if($name !== null && StringToItemParser::getInstance()->parse($name) === null) StringToItemParser::getInstance()->register($name, fn() => $item);
+        if($creative && !CreativeInventory::getInstance()->contains($item)) CreativeInventory::getInstance()->add($item);
+        return true;
     }
 }
