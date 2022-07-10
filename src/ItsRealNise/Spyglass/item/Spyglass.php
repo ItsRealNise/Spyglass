@@ -3,11 +3,12 @@
 namespace ItsRealNise\Spyglass\item;
 
 use pocketmine\item\Item;
+use pocketmine\item\Releasable;
 use pocketmine\item\ItemIdentifier;
 
 use ItsRealNise\Spyglass\CustomIds;
 
-class Spyglass extends Item
+class Spyglass extends Item implements Releasable
 {
 
     public function __construct()
@@ -19,4 +20,8 @@ class Spyglass extends Item
     {
         return 1;
     }
+    
+    public function canStartUsingItem(Player $player) : bool{
+		return true;
+	}
 }
