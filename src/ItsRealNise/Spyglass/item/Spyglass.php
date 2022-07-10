@@ -4,6 +4,7 @@ namespace ItsRealNise\Spyglass\item;
 
 use pocketmine\item\Item;
 use pocketmine\item\Releasable;
+use pocketmine\player\Player;
 use pocketmine\item\ItemIdentifier;
 
 use ItsRealNise\Spyglass\CustomIds;
