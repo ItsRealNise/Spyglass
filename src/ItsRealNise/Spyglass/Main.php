@@ -30,7 +30,7 @@ class Main extends PluginBase {
         $value2 = $property2->getValue(ItemTranslator::getInstance());
 
         $runtimeIds = json_decode(file_get_contents(BEDROCK_DATA_PATH . 'required_item_list.json'), true);
-        $itemIds = json_decode(file_get_contents(BEDROCK_DATA_PATH . 'item_id_map.json'), true);
+        $itemIds = json_decode(file_get_contents(BEDROCK_DATA_PATH . 'r16_to_current_item_map.json'), true);
 
         foreach ([
                      "minecraft:spyglass" => CustomIds::SPYGLASS
